@@ -617,7 +617,7 @@ public class HackRFSweepSpectrumAnalyzer implements HackRFSettings, HackRFSweepD
 						 */
 						if (parameterShowPeaks.getValue()) {
 							datasetSpectrum.refreshPeakSpectrum();
-							waterfallPlot.setStatusMessage(String.format("Полная спектральная пиковая мощность» и в конце заменить три символа «дБм",
+							waterfallPlot.setStatusMessage(String.format("Полная спектральная пиковая мощность %.1fдБм",
 									datasetSpectrum.calculateSpectrumPeakPower()), 0);
 						}
 
