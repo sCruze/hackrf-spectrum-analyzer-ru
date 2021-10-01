@@ -189,7 +189,7 @@ public class WaterfallPlot extends JPanel {
 			g.draw(rect);
 		}
 
-		renderingInfo = String.format("RBW %.1fkHz / FFT bins: %d%s / %.1ffps",
+		renderingInfo = String.format("RBW %.1fкГц / Бины FFT: %d%s / %.1бп/с",
 				lastSpectrum == null ? 0 : lastSpectrum.getFFTBinSizeHz() / 1000d, size >= 10000 ? size / 1000 : size,
 				size >= 10000 ? "k" : "", fps.getEma());
 		fpsRenderedFrames++;
@@ -326,7 +326,7 @@ public class WaterfallPlot extends JPanel {
 		if (displayMarker) {
 			g.setColor(Color.gray);
 			g.drawLine(displayMarkerX, 0, displayMarkerX, h);
-			g.drawString(String.format("%.1fMHz", displayMarkerFrequency / 1000000.0), displayMarkerX + 5, h / 2);
+			g.drawString(String.format("%.1fМГц", displayMarkerFrequency / 1000000.0), displayMarkerX + 5, h / 2);
 		} //finish marker 
 
 		g.setColor(Color.white);
