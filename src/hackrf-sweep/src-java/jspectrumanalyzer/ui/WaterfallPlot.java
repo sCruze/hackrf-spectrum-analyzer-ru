@@ -189,7 +189,7 @@ public class WaterfallPlot extends JPanel {
 			g.draw(rect);
 		}
 
-		renderingInfo = String.format("RBW %.1fкГц / Бины FFT: %d%s / %.1бп/с",
+		renderingInfo = String.format("RBW %.1fkHz / FFT bins: %d%s / %.1ffps",
 				lastSpectrum == null ? 0 : lastSpectrum.getFFTBinSizeHz() / 1000d, size >= 10000 ? size / 1000 : size,
 				size >= 10000 ? "k" : "", fps.getEma());
 		fpsRenderedFrames++;
